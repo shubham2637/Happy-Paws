@@ -1,0 +1,63 @@
+
+  h1{
+  text-align: center;
+  font-size: 100px;
+  font-style: italic;
+}
+.ABC{
+background-color:#ffff1a;
+  color: blue;
+}
+#AA{
+  align-items: center;
+  font-size: 100px;
+  font-style: italic;
+}
+img{
+  border-radius:8px;
+  max-width: 70%;
+  height:auto;
+  display:block;
+  margin-left:auto;
+  margin-right: auto;
+
+}
+h2{
+  color: black;
+  text-align:center;
+  font-style:italic;
+}
+.area{
+  font-size: 30px;
+  text-align: right;
+  color:rgb(100,50,500);
+  style:calibri;
+  /*background-color:orange;*/
+}
+.browse{
+  font-size: 30px;
+  font-style: oblique;
+  text-align: center;
+}
+#hello{
+  color: black;
+}
+#key{
+
+    border-radius:8px;
+    max-width: 70%;
+    height:auto;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+}
+.imagess{
+  border-radius:8px;
+
+  height:900px;
+  width: 900px;
+  display:block;
+  margin-left:auto;
+  margin-right: auto;
+
+}
