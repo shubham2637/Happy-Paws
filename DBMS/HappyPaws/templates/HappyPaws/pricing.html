@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="part1_master.css">
+    <link rel="stylesheet" href={% static "part1_master.css" %}>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -23,31 +23,31 @@
       }
     </style>
   </head>
-  <body background="images\contact us image.jpg">
+  <body background={% static "images\contact us image.jpg" %}>
     <form class="ABC" action="" method="get">
 
       <h1 id="AA"> HAPPY PAWS</h1>
       <p></p>
       <p></p>
-  <div class="browse">
+      <div class="browse">
 
-          <a href="homepage.html">HOME</a>
-          <a href="log.html">LOGIN</a>
-          <a href="SIGNUP.html">SIGNUP</a>
+          <a href="\">HOME</a>
+          <a href="signin">LOGIN</a>
+          <a href="add_owner">SIGNUP</a>
           <span id="hello">
-        <a href="grooming.html">GROOMING</a>
-        <a href="boarding.html">BOARDING</a>
-        <a href="daycare.html">DAYCARE</a>
+        <a href="grooming">GROOMING</a>
+        <a href="boarding">BOARDING</a>
+        <a href="daycare">DAYCARE</a>
       </span>
-            <a href="pricing.html">PRICING</a>
-          <a href="contact us.html">CONTACT US</a>
-    </div>
+            <a href="pricing">PRICING</a>
+          <a href="contactus">CONTACT US</a>
+        </div>
   </form>
 
     <h1 ALIGN="center">Pricing</h1>
-   <img src="images\pricing1n image.jpg" alt="" ALIGN="left">
+   <img src={% static "images\pricing1n image.jpg" %} alt="" ALIGN="left">
   <!--  <img src="C:\Users\sneha\Desktop\happy paws\contact us\p3.jpg" alt="">-->
-    <img src="images\pricing2n image.jpg" alt="">
+    <img src={% static "images\pricing2n image.jpg" %} alt="">
   <!--  <img src="C:\Users\sneha\Desktop\happy paws\contact us\p1.jpg" alt="" ALIGN="right">-->
 
   <font size="6" face="Mangal" color="blue">  <p> We proudly welcome all breeds. No breed restrictions.<br>

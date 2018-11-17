@@ -1,17 +1,18 @@
-{% load static %}
+<html>
 <!DOCTYPE html>
-<html >
   <head>
     <meta charset="utf-8">
+
     <link rel="stylesheet" href="part1_master.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-    <title>dog details</title>
+    <title></title>
     <style>
       body{
+        color: yellow;
         margin:0;
         pading:0;
         background position:centre;
@@ -23,9 +24,10 @@
       }
     </style>
   </head>
-  <body background={% static "images\dog image.jpg" %}>
+  <body background="images\contact us image.jpg">
     <form class="ABC" action="" method="get">
-    <font size="7" face="Mangal" color="blue" ALIGN="center">  <h1 id="AA"> HAPPY PAWS</h1></font>
+
+    <font  face="calibri" color="red">  <h1 id="AA"> HAPPY PAWS</h1></font>
       <p></p>
       <p></p>
       <div class="browse">
@@ -42,34 +44,15 @@
           <a href="contactus">CONTACT US</a>
         </div>
 
+
+    <font size="8" face="Mangal" color="black"><label> Name:<br> <input type="text" name="Name"><br></label><br>
+        <font size="8" face="Mangal" color="black"><label> Breed:<br> <input type="text" name="Name"><br></label><br>
+          <font size="8" face="Mangal" color="black"><label> age: <br><input type="number" name=""><br></label><br>
+                <font size="8" face="Mangal" color="black"><label>sex :<br> <input type="text" name="dage"><br></label><br>
+                      <font size="8" face="Mangal" color="black"><label>Owner :<br><input type="text" name="dbreed"><br></label><br>
+
+  <font size="8">  <input type="submit" name="submit" value="THANKYOU">
   </form>
-      <font size="6" face="Mangal" color="white"><h1 ALIGN="center">DOG DETAIS HERE!!</h1></font>
-
-    <table ALIGN="center" border="4" bordercolor="#336699" cellpadding="2" cellspacing="2" width="50%">
-  <thead>
-
-<th> <h2><font size="6" face="Mangal" color="black"> <label for="any">Number of the dog:</label><br></th>
-<th><h2><font size="6" face="Mangal" color="black"> <label for="any">Name of your dog:</label><br></th>
-<th>  <label for="any">breed:</label><br></th>
-<th>  <label for="any">dog's age:</label><br></th>
-<th>  <label for="any">owner name:</label><br></th>
-<th>  <label for="any">Address:</label><br></th>
-  </thead>
-  {% for d in dogs %}
-  <tr>
-    <td><font size="4" face="Mangal" color="blue">{{d.id}}</td>
-    <td><font size="4" face="Mangal" color="blue">{{d.name}}</td>
-    <td><font size="4" face="Mangal" color="blue">{{d.breed}}</td>
-    <td><font size="4" face="Mangal" color="blue">{{d.age}}</td>
-    <td><font size="4" face="Mangal" color="blue">{{owner.name}}</td>
-    <td><font size="4" face="Mangal" color="blue">{{owner.address}}</td>
-  </tr>
-   {%endfor%}
-</table>
-
-  <h2 ALIGN="center">THANK YOU!!</h2>
-  </h2>
-
   <hr width="100%" color="gold">
   <p><centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
   Phone: (80423) 745-711 | Fax: (8022) 7445-76284

@@ -7,37 +7,35 @@
 
 <title>LOGIN</title></head>
 <body background={% static "contactUs image.jpg" %}>
-  <form class="ABC" action="signin" method="post">
+  <form class="ABC" action={% url 'dogs' %} method="post">
       {% csrf_token %}
         <h1 id="AA"> HAPPY PAWS</h1>
         <p></p>
         <p></p>
-    <div class="browse">
+        <div class="browse">
 
-        <a href="\homepage.html">HOME</a>
-        <a href="\log.html">LOGIN</a>
-              <a href="\signup.html">SIGNUP</a>
-        <span id="hello">
-      <a href="\grooming.html">GROOMING</a>
-      <a href="\boarding.html">BOARDING</a>
-      <a href="\daycare.html">DAYCARE</a>
-
-    </span>
-          <a href="\pricing.html">PRICING</a>
-        <a href="\login2.html">CONTACT US</a>
-      </div>
-
-<p><font size="7" face="Gill Sans MT" color="black">Alredy a member</p>
+            <a href="\">HOME</a>
+            <a href="signin">LOGIN</a>
+            <a href="add_owner">SIGNUP</a>
+            <span id="hello">
+          <a href="grooming">GROOMING</a>
+          <a href="boarding">BOARDING</a>
+          <a href="daycare">DAYCARE</a>
+        </span>
+              <a href="pricing">PRICING</a>
+            <a href="contactus">CONTACT US</a>
+          </div>
+<p><font size="7" face="Gill Sans MT" color="black">Alredy a member?</p>
 <p>
 <font size="12" face="Ink Free" color="cyan">
 LOG IN
 </font></p>
-<font size="6" face="Gill Sans MT" color="black"><label> Username: <br><input type="text" name="username" ><br></font></label>
+<font size="6" face="Gill Sans MT" color="black"><label> {{form.username.label_tag }}<br><input type="text" name="username" ><br></font></label>
 <!--<font size="6" face="Gill Sans MT" color="black"><label> Email ID : <br><input type="text" name="Email ID"><br></label>-->
 <!--<font size="6" face="Gill Sans MT" color="black"><label> Contact number : <br><input type="text" name="contact number"><br></label>-->
-<font size="6" face="Gill Sans MT" color="black" ><label> Password : <br><textarea cols="30" rows="2" name="password" type="password"></textarea></label><br>
+<font size="6" face="Gill Sans MT" color="black" ><label> {{form.password.label_tag}} <br><input type="password" name="password" ></label><br>
 <!--<font size="6" face="Gill Sans MT" color="black"><label> Address : <br><textarea cols="40" rows="3" name="address"></textarea></label><br>-->
-<input type="submit" name="submit" value="submit">
+<input type="submit" name="submit" value="login">
 </form>
 <br>
 <br>

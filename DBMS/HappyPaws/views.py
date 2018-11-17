@@ -39,6 +39,8 @@ def daycare(request):
 def welcome(request):
     return render(request, "HappyPaws/welcome.html",{})
 
+def price(request):
+    return render(request, "HappyPaws/pricing.html",{})
 
 def owner_add(request):
     context = {
@@ -49,7 +51,7 @@ def owner_add(request):
 
 def dogs(request,owner_id=1):
     context = {
-    "owner": owner.objects.get(pk=create_owner.email),
+    "owner": owner.objects.get(pk=1),
     "dogs":dog.objects.get(pk=owner_id)
     }
 
@@ -72,12 +74,20 @@ def create_owner(request):
 
 
 
-def signin(request):
-    user = request.POST['username']
-    passw = request.POST['password']
-    usera = authenticate(username=user, password=passw)
-    if usera is not None:
-        login(request, usera)
-        return render(request, "dogs",context)
+"""def signin(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        if user.is_active:
+            login(request, user)
+            # Redirect to a success page.
+            context={
+            Owners = owner.objects.get(pk=email)
+            }
+            return render(request, "HappyPaws/dog.html",)
+        else:
+            # Return a 'disabled account' error message
     else:
-         return render(request, "HappyPaws/signin.html",context)
+        # Return an 'invalid login' error message.
+"""
