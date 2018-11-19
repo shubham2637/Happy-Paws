@@ -49,10 +49,9 @@ def owner_add(request):
 
     return render(request, "HappyPaws/add-owner.html",context)
 
-def dogs(request,owner_id=1):
+def owners(request):
     context = {
-    "owner": owner.objects.get(pk=1),
-    "dogs":dog.objects.get(pk=owner_id)
+    "owner": owner.objects.all()
     }
 
     return render(request, "HappyPaws/dog.html",context)
@@ -62,7 +61,7 @@ def create_owner(request):
 
     if request.POST:
 
-            own = owner(name=request.POST['name'], email=request.POST['email'],address=request.POST['address'],contact_no=request.POST['contact_no'])
+            own = owner(name=request.POST['name'], email=request.POST['email'],address=request.POST['address'],contact_no=request.POST['contact_no'], username=request.POST['username'])
             own.save()
             user = User.objects.create_user(username=request.POST['username'],email=request.POST['email'],password=request.POST['password'])
 

@@ -9,7 +9,7 @@ class owner(models.Model):
     email = models.EmailField()
     address = models.CharField(max_length=512)
     contact_no = models.IntegerField()
-    #username = models.CharField(max_length=128, unique="True")
+    username = models.CharField(max_length=128, unique=True)
 
 
     def __str__(self):
