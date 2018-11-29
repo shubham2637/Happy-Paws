@@ -44,7 +44,7 @@
   </tr>
 </table>
 <input type="submit" value="login">
- <input type="hidden" name="next" value="welcome/{{form.username}}"> </form>
+ <input type="hidden" name="next" value={{form.username}}> </form>
 {# Assumes you setup the password_reset view in your URLconf #} <p><a href="{% url 'add_owner' %}">Sign up?</a></p>
 {% endblock %}
 <div id="container">

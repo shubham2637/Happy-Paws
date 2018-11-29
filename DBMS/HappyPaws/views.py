@@ -36,7 +36,15 @@ def boardings(request):
 def daycare(request):
     return render(request, "HappyPaws/daycare.html",{})
 
-def welcome(request,username):
+def welcome(request,userName):
+    try:
+        owners = owner.objects.get(username=userName)
+    except owners.DoesNotExist:
+        raise Http404("Owner does not exist.")
+    context = {
+        "owners": owners,
+        "dogs": dog.objects.include(owner=owners).all()
+    }
     context={
     "owners": owner.objects.get(username=username)
     }

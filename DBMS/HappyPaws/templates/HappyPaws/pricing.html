@@ -1,63 +1,75 @@
-<!DOCTYPE html>
 {% load static %}
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html >
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href={% static "part1_master.css" %}>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href={% static "p2.css" %}>
+    <link rel="stylesheet" href={% static "p5.css" %}>
+    <link rel="stylesheet" href={% static "p6.css" %}>
+<link rel="stylesheet" href={% static "p7.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Dancing+Script|Lobster|Pacifico|Play|Roboto" rel="stylesheet">
+      <title></title>
 
-    <title></title>
-    <style>
-      body{
-        margin:0;
-        pading:0;
-        background position:centre;
-        background-repeat:no-repeat;
-        background-size: cover;
-        height:1100px;
-        font-family:sans-serif;
-        position: relative;
-      }
-    </style>
   </head>
-  <body background={% static "images\contact us image.jpg" %}>
-    <form class="ABC" action="" method="get">
+  <body background={% static "imj\t1.jpg" %}>
+    <div class="logo"> <a href="/"></a>
+      <img src={% static "imj\logo1.jpg" %} alt="">
+    </div>
+    <nav>
+       <ul>
+       <li> <a href="\">HOME</a></li>
+       <li> <a href="signin">LOGIN</a></li>
+      <li> <a href="add_owner">SIGNUP</a></li>
+      <li> <a href="grooming">GROOMING</a></li>
+      <li> <a href="boarding">BOARDING</a></li>
+      <li> <a href="daycare">DAYCARE</a></li>
+      <li> <a href="pricing">PRICING</a></li>
+       <li> <a href="contactus">CONTACT US</a></li>
+           </ul>
+          </nav>
+           <div class="atc">
+           <h1 id="h4u">hAppY PaWs</h1>
+           <table class="tabs" border="2">
 
-      <h1 id="AA"> HAPPY PAWS</h1>
-      <p></p>
-      <p></p>
-      <div class="browse">
-
-          <a href="\">HOME</a>
-          <a href="signin">LOGIN</a>
-          <a href="add_owner">SIGNUP</a>
-          <span id="hello">
-        <a href="grooming">GROOMING</a>
-        <a href="boarding">BOARDING</a>
-        <a href="daycare">DAYCARE</a>
-      </span>
-            <a href="pricing">PRICING</a>
-          <a href="contactus">CONTACT US</a>
-        </div>
-  </form>
-
-    <h1 ALIGN="center">Pricing</h1>
-   <img src={% static "images\pricing1n image.jpg" %} alt="" ALIGN="left">
-  <!--  <img src="C:\Users\sneha\Desktop\happy paws\contact us\p3.jpg" alt="">-->
-    <img src={% static "images\pricing2n image.jpg" %} alt="">
-  <!--  <img src="C:\Users\sneha\Desktop\happy paws\contact us\p1.jpg" alt="" ALIGN="right">-->
-
-  <font size="6" face="Mangal" color="blue">  <p> We proudly welcome all breeds. No breed restrictions.<br>
-Grooming is not available on Sunday,<br> except for our boarders receiving check-out treatment.
- <br>We do not allow pick-ups or drop-offs on major holidays or before or after hours.<br>
-No exceptions!</p></font>
-<hr width="100%" color="gold">
-<p><centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
+               <tr id="tt5">
+               <th id="tt">Type </th>
+               <th id="tt1">size</th>
+               <th id="tt2">prices</th>
+               </tr>
+               <tr id="tl1">
+                 <td id="tl2"> hair cut</td>
+                 <td id="tl3"> small <br>medium <br>large <br></td>
+                 <td id="tl4"> Rs.1000 <br>Rs.1500 <br> Rs.2000</td>
+               </tr>
+              <tr id="tj1">
+                <td> daycare(daytime)</td>
+                <td> small <br>medium <br>large <br></td>
+                <td>Rs.3500 <br>Rs.4000 <br> Rs.4500</td>
+              </tr>
+              <tr id="tk1">
+                <td> Boarding(day & night)</td>
+                <td> small <br>medium <br>large <br></td>
+                <td>Rs.5000 <br>Rs.5500 <br> Rs.6000</td>
+              </tr>
+              <tr id="tm1">
+                <td>Regular bath</td>
+                <td> small <br>medium <br>large <br></td>
+                <td>Rs.800 <br>Rs.900 <br> Rs.1000</td>
+            </tr>
+            <tr id="tm2">
+              <td>Bath(with shampoo)</td>
+              <td> small <br>medium <br>large <br></td>
+              <td>Rs.1100 <br>Rs.1400 <br> Rs.1700</td>
+          </tr>
+            <tr id="tn1">
+                <td>Nail cut</td>
+               <td>ALL</td>
+                <td>Rs.700</td>
+            </tr>
+           </table>
+           <hr width="100%" color="gold">
+<p> <centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
 Phone: (80423) 745-711 | Fax: (8022) 7445-76284
-Copyright 2018 Happy Paws. All Rights Reserved. Web Design by Raycomi Media.</font size></centre></p>
-
-  </body>
+Copyright 2018 hAppY PaWs. All Rights Reserved.<br> Web Design <span>SNEHA AND SUBHIKSHA</span> .</font size></centre></p>
+</body>
 </html>
