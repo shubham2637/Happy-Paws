@@ -1,0 +1,88 @@
+body{
+  margin:0;
+    font-family: 'Play', sans-serif;
+    font-weight: bold;
+background-repeat: no-repeat;
+
+}
+.aa1{
+  opacity: 0.7;
+  background-color: yellow;
+  height: 500px;
+  width: 600px;
+  box-shadow: 0px 0px 10px 2px grey;
+  margin: 0px auto;
+  color: black;
+  background-size: cover;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+#aa2{
+  text-align: center;
+  color: black;
+  margin-top: 0px;
+  font-size: 50px;
+
+}
+nav{
+  width: 100;
+  background: black;
+  overflow: auto;
+}
+ul{
+  padding: 0;
+  margin: 0 0 0 150px;
+  list-style: none;
+}
+.logo img{
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 10px;
+  height: 50px;
+  width: 100px;
+  }
+  li{
+    float: left;
+  }
+  nav a{
+    width: 100px;
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    font-family: "arial";
+    color: #f2f2f2;
+    text-align: center;
+  }
+nav a:hover{
+background: purple;
+transition: 0.5s;
+text-transform: uppercase;
+}
+h1{
+  font-family: 'Play', sans-serif;
+  color: brown;
+  font-size: 40px;
+}
+#aa3{
+  background-color: pink;
+  height: 100px;
+  width: 120px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+#aa4,#aa5{
+  font-size: 20px;
+  border: 4px solid black;
+}
+span{
+  color: purple;
+  font-weight: bold;
+  font-size: 25px;
+}
+#h4u{
+  font-size:90px;
+  color: brown;
+  text-align: center;
+    font-family: 'Play', sans-serif;
+}

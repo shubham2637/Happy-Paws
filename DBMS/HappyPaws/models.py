@@ -21,6 +21,7 @@ class dog(models.Model):
     age = models.PositiveIntegerField(default=1)
     sex = models.CharField(max_length=8)
     owner = models.ForeignKey(owner,on_delete=models.CASCADE)
+    size = models.CharField(max_length=32)
 
 
     def __str__(self):

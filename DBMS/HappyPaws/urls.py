@@ -14,7 +14,7 @@ path("boarding", views.boardings, name="boarding"),
 path("daycare", views.daycare, name="daycare"),
 path("owners", views.owners, name="owners"),
 path("pricing", views.price, name="pricing"),
-path("welcome",views.welcome, name="welcome"),
+path("welcome/<str:username>",views.welcome, name="welcome"),
 path("create_owner", views.create_owner)
 
 ]

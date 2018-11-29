@@ -1,0 +1,19 @@
+#tt5{
+ font-size: 60px;
+color: black;
+}
+#tt,#tt1,#tt2{
+  background-color: pink;
+}
+.tabs{
+  text-align: center;
+  margin-left: 8%;
+}
+table{
+  font-size: 20px;
+  background-color: pink;
+  border-radius: 10px;
+  width: 400px;
+  border: 2px solid purple;
+  height: 500px;
+}

@@ -1,47 +1,62 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href={% static "part1_master.css" %}>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={% static "p2.css" %}>
+    <link rel="stylesheet" href={% static "p4.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Dancing+Script|Lobster|Pacifico|Play|Roboto" rel="stylesheet">
+      <title></title>
+  </head>
+  <body>
+    <div class="logo"> <a href="\"></a>
+      <img src={% static "imj\logo1.jpg" %} alt="">
+    </div>
+     <nav>
+        <ul>
+        <li> <a href="\">HOME</a></li>
+        <li> <a href="signin">LOGIN</a></li>
+       <li> <a href="add_owner">SIGNUP</a></li>
+       <li> <a href="grooming">GROOMING</a></li>
+       <li> <a href="boarding">BOARDING</a></li>
+       <li> <a href="daycare">DAYCARE</a></li>
+       <li> <a href="pricing">PRICING</a></li>
+        <li> <a href="contactus">CONTACT US</a></li>
+            </ul>
+           </nav>
+           <h1 id="h4u">hAppY PaWs</h1>
 
 
-<title>LOGIN</title></head>
-<body background={% static "contactUs image.jpg" %}>
-  <form class="ABC" action="owners.html" method="post">
-      {% csrf_token %}
-        <h1 id="AA"> HAPPY PAWS</h1>
-        <p></p>
-        <p></p>
-        <div class="browse">
-
-            <a href="\">HOME</a>
-            <a href="signin">LOGIN</a>
-            <a href="add_owner">SIGNUP</a>
-            <span id="hello">
-          <a href="grooming">GROOMING</a>
-          <a href="boarding">BOARDING</a>
-          <a href="daycare">DAYCARE</a>
-        </span>
-              <a href="pricing">PRICING</a>
-            <a href="contactus">CONTACT US</a>
-          </div>
-<p><font size="7" face="Gill Sans MT" color="black">Alredy a member?</p>
-<p>
-<font size="12" face="Ink Free" color="cyan">
-LOG IN
-</font></p>
-<font size="6" face="Gill Sans MT" color="black"><label> {{form.username.label_tag }}<br><input type="text" name="username" ><br></font></label>
-<!--<font size="6" face="Gill Sans MT" color="black"><label> Email ID : <br><input type="text" name="Email ID"><br></label>-->
-<!--<font size="6" face="Gill Sans MT" color="black"><label> Contact number : <br><input type="text" name="contact number"><br></label>-->
-<font size="6" face="Gill Sans MT" color="black" ><label> {{form.password.label_tag}} <br><input type="password" name="password" ></label><br>
-<!--<font size="6" face="Gill Sans MT" color="black"><label> Address : <br><textarea cols="40" rows="3" name="address"></textarea></label><br>-->
-<input type="submit" name="submit" value="login">
-</form>
-<br>
-<br>
-<hr width="100%" color="gold">
-<p><centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
-Phone: (80423) 745-711 | Fax: (8022) 7445-76284
-Copyright 2018 Happy Paws. All Rights Reserved. Web Design by Raycomi Media.</font size></centre></p>
-</body>
+    <hr width="100%" color="gold">
+    {% block content %}
+{% if form.errors %} <p>Your username and password didn't match. Please try again.</p> {% endif %}
+{% if next %} {% if user.is_authenticated %} <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+{% else %} <p>Please login to see this page.</p> {% endif %} {% endif %}
+<form method="post" action="{% url 'signin' %}"> {% csrf_token %}
+  <table>
+   <tr>
+     <td>{{ form.username.label_tag }}</td>
+     <td>{{ form.username }}</td>
+  </tr>
+  <tr>
+     <td>{{ form.password.label_tag }}</td>
+      <td>{{ form.password }}</td>
+  </tr>
+</table>
+<input type="submit" value="login">
+ <input type="hidden" name="next" value="welcome/{{form.username}}"> </form>
+{# Assumes you setup the password_reset view in your URLconf #} <p><a href="{% url 'add_owner' %}">Sign up?</a></p>
+{% endblock %}
+<div id="container">
+  <div id="sliderbox">
+  <img id="a" src={% static "imj\t1.jpg" %} alt="">
+  <img id="b" src={% static "imj\t2.jpg" %} alt="">
+  <img id="c" src={% static "imj\t3.jpg" %} alt="">
+  <img id="d" src={% static "imj\t4.jpg" %} alt="">
+  </div>
+</div>
+    <p> <centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
+    Phone: (80423) 745-711 | Fax: (8022) 7445-76284
+    Copyright 2018 hAppY PaWs. All Rights Reserved. <br>Web Design <span>SNEHA AND SUBHIKSHA</span> .</font size></centre></p>
+  </body>
 </html>

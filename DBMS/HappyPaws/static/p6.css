@@ -1,0 +1,26 @@
+.tex{
+  font-size:28px;
+  text-align: center;
+}
+.texi{
+  font-size:28px;
+
+  text-align: center;
+}
+#hed{
+  color: orange;
+}
+#nmi{
+  color: white;
+  font-size: 45px;
+}
+.atc{
+  text-align: center;
+  font-size: 40px;
+
+}
+#space{
+  width: 30px;
+  height: 20px;
+  background-color: white;
+}

@@ -36,7 +36,10 @@ def boardings(request):
 def daycare(request):
     return render(request, "HappyPaws/daycare.html",{})
 
-def welcome(request):
+def welcome(request,username):
+    context={
+    "owners": owner.objects.get(username=username)
+    }
     return render(request, "HappyPaws/welcome.html",{})
 
 def price(request):
@@ -68,7 +71,7 @@ def create_owner(request):
             group = Group.objects.get(name="Owner")
             group.user_set.add(user)
             user.save()
-            return render(request,"HappyPaws/welcome.html",{})
+            return render(request,"HappyPaws/signin.html",{})
     return render(request,"",{})
 
 

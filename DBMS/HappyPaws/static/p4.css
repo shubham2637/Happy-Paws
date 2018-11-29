@@ -1,0 +1,54 @@
+
+#a,#b,#c,#d{
+
+    height: 500px;
+    width: 750px;
+    float: left;
+}
+#sliderbox{
+  position: relative;
+animation-name: slider;
+animation-duration: 9s;
+animation-iteration-count: infinite;
+float: left;
+width: 3000px;
+}
+@keyframes slider {
+  0%{
+    left: 0px;
+  }
+  20%
+  {
+    left: 0px;
+  }
+  25%{
+    left: -750px;
+  }
+  45%{
+    left: -750px;
+  }
+  50%{
+    left: -1500px;
+  }
+  70%{
+    left: -1500px;
+  }
+  75%{
+    left: -2250px;
+  }
+}
+#h4u{
+  font-size:90px;
+  color: brown;
+  text-align: center;
+    font-family: 'Play', sans-serif;
+}
+.bottom{
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  color: brown;
+}
+span{
+  color: purple;
+  font-weight: bold;
+}
