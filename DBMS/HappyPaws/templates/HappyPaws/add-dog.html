@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={% static "p2.css" %}>
+    <link rel="stylesheet" href={% static "p4.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Dancing+Script|Lobster|Pacifico|Play|Roboto" rel="stylesheet">
+      <title></title>
+  </head>
+  <body>
+    <div class="logo"> <a href="\"></a>
+      <img src={% static "imj\logo1.jpg" %} alt="">
+    </div>
+     <nav>
+        <ul>
+        <li> <a href="\">HOME</a></li>
+        <li> <a href="\signin">LOGIN</a></li>
+       <li> <a href="\add_owner">SIGNUP</a></li>
+       <li> <a href="\grooming">GROOMING</a></li>
+       <li> <a href="\boarding">BOARDING</a></li>
+       <li> <a href="\daycare">DAYCARE</a></li>
+       <li> <a href="\pricing">PRICING</a></li>
+        <li> <a href=\"contactus">CONTACT US</a></li>
+            </ul>
+           </nav>
+           <h1 id="h4u">hAppY PaWs</h1>
+           <h2 id="h4u">Welcome {{owners.name}}</h2>
+           <div class="aa1">
+      <form id="aa2" action="/create_dog" method="post">
+        {% csrf_token %}
+        <br>
+        <label> Dog Name :</label><br> <br>
+          <input id="aa7" type="text" name="name" required="True"><br>
+
+        <label>Dog's age :<br> </label>
+          <input id="aa9" type="number" name="age" max="16" required="True"><br> <br>
+
+      <label> breed of your dog :<br></label>
+        <input id="aa10" type="text" name="breed"><br> <br>
+        <label> Sex of your dog :<br></label>
+        <select name="sex" >
+			<option selected>Choose...</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      </select>
+      <br>
+      <br>
+      <input type="hidden" name="id" value="{{owners.id}}">
+    <input id="aa3" type="submit" name="" value="Add Dog">
+    </form>
+    </div>
+    <hr width="100%" color="gold">
+        <p> <centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
+        Phone: (80423) 745-711 | Fax: (8022) 7445-76284
+        Copyright 2018 hAppY PaWs. All Rights Reserved.<br> Web Design <span>SNEHA AND SUBHIKSHA</span> .</font size></centre></p>
+
+      </body>
+    </html>

@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={% static "p2.css" %}>
+    <link rel="stylesheet" href={% static "p5.css" %}>
+    <link rel="stylesheet" href={% static "p6.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Dancing+Script|Lobster|Pacifico|Play|Roboto" rel="stylesheet">
+      <title>Add services</title>
+  </head>
+  <body>
+    <div class="logo"> <a href="\"></a>
+      <img src={% static "imj\logo1.jpg" %} alt="">
+    </div>
+     <nav>
+        <ul>
+        <li> <a href="\">HOME</a></li>
+        <li> <a href="\signin">LOGIN</a></li>
+       {# <li> <a href="\add_owner">SIGNUP</a></li> #}
+       <li> <a href="\grooming">GROOMING</a></li>
+       <li> <a href="\boarding">BOARDING</a></li>
+       <li> <a href="\daycare">DAYCARE</a></li>
+       <li> <a href="\pricing">PRICING</a></li>
+        <li> <a href="\contactus">CONTACT US</a></li>
+            </ul>
+           </nav>
+           <h1 id="h4u">hAppY PaWs <br> <h2 ALIGN="center">welcome {{dogs.name}}</h2> </h1>
+           <div class="atc1">
+        <form  action="/create_services" method="post">
+                {% csrf_token %}
+
+<input  id="cb" type="checkbox" name="1" value="hair cut">hair cut <br>
+
+<input id="cb" type="checkbox" name="2" value="daycare">daycare <br>
+
+<input id="cb" type="checkbox" name="3" value="boarding">boarding <br>
+
+<input id="cb" type="checkbox" name="4" value="regular bath">regular bath <br>
+
+
+<input id="cb" type="checkbox" name="5" value="bath(with shampoo)">bath(with shampoo) <br>
+
+
+<input id="cb" type="checkbox" name="6" value="nailcut">nailcut <br> <br>
+Select your dog size: <br>
+<input type="radio" name="size" value="small">small
+<input type="radio" name="size" value="medium">medium
+<input type="radio" name="size" value="large">large <br> <br>
+<input type="hidden" name="id" value="{{dogs.id}}">
+<input  id="sb" type="submit" name="" value="Add">
+</form>
+</div>
+
+
+          <hr width="100%" color="silver">
+          <p> <centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
+          Phone: (80423) 745-711 | Fax: (8022) 7445-76284
+          Copyright 2018 hAppY PaWs. All Rights Reserved.<br> Web Design <span>SNEHA AND SUBHIKSHA</span>
+          </font size></centre></p>
+
+         </body>
+       </html>

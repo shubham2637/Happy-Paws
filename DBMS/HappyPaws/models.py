@@ -51,7 +51,7 @@ class pricing(models.Model):
 class grooming(models.Model):
     dog = models.ForeignKey(dog,on_delete=models.CASCADE)
     service = models.CharField(max_length=128)
-    price = models.ForeignKey(pricing, on_delete=models.CASCADE)
+    price = models.IntegerField()
 
 
     def __str__(self):

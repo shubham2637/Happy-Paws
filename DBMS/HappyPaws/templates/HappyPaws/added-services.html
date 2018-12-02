@@ -7,6 +7,15 @@
     <link rel="stylesheet" href={% static "p5.css" %}>
     <link rel="stylesheet" href={% static "p6.css" %}>
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Dancing+Script|Lobster|Pacifico|Play|Roboto" rel="stylesheet">
+    <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <title></title>
   </head>
   <body>
@@ -25,29 +34,37 @@
         <li> <a href="contactus">CONTACT US</a></li>
             </ul>
            </nav>
-           <h1 id="h4u">hAppY PaWs <br> <h2 ALIGN="center">welcome {{dog.name}}</h2> </h1>
+           <h1 id="h4u">hAppY PaWs <br> <h2 ALIGN="center">welcome {{dogs.name}}</h2> </h1>
 
-                 <table class="tabs" border="2">
+                 <table ALIGN="center" class="tabs" border="2">
+                   <thead>
+                     <tr id="tt5">
+                       <th id="tt2">service id</th>
+                     <th id="tt">Services Added: </th>
+                     <th id="tt2">prices</th>
+                     </tr>
+                   </thead>
 
-                    {% for g in grommings  %}
-                    <tr id="tt5">
-                    <th id="tt">Services Added: </th>
-                    <th id="tt2">prices</th>
-                    </tr>
-                    <tr id="tl1">
-                      <td id="tl2"> g.service</td>
-                    <td id="tl4">g.price</td>  <br>
-                    </tr>
+
+                     {% for g in groomings  %}
+
+                    <tbody>
+                      <tr id="tl1">
+                        <td id="tl2"> {{g.id}}</td>
+                        <td id="tl2"> {{g.service}}</td>
+                      <td id="tl4">{{g.price}}</td>  <br>
+                      </tr>
+                    </tbody>
 
                     {% endfor %}
 
 
               </table>
-               <h1 id="end">total price: TOTAL PRICE</h1>
-               <form  ALIGN="center"  class="" action="welcome" method="post">
-
-
-                <input  id="sb" type="submit" name="finish" value="finish">
+               <h1 id="end" ALIGN="centre">total price: {{final.price__sum}}</h1>
+               <form  ALIGN="center"  class="" action="\welcome" method="post">
+                 {% csrf_token %}
+                  {# <input type="hidden" name="username" value=""> #}
+                <input  id="sb" type="submit" placeholder="finish" name="username" value="{{dogs.owner.username}}">
 
 
                 </form>

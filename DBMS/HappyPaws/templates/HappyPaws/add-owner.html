@@ -29,17 +29,18 @@
       <form id="aa2" action="create_owner" method="post">
         {% csrf_token %}
         <p> <label for="name">Name:</label><br>
-           <input id="aa5" type="text" name="name" required><br>
+           <input id="aa5" type="text" name="name" required="True"><br>
            <label for="email">EmailId:</label><br>
-            <input id="aa6" type="email" name="email" required><br>
+            <input id="aa6" type="email" name="email" required="True"><br>
              <label> Contact number : <br></label>
-               <input id="aa11" type="text" name="contact_no"><br>
+               <input id="aa11" type="text" name="contact_no" required="True" maxlength="10"><br>
               <label> Address : <br></label>
-                <textarea id="aa12" cols="20" rows="2" name="address"></textarea><br>
+
+                <textarea id="aa12" cols="20" rows="2" name="address" required="True" ></textarea><br>
                 <label> username : <br></label>
-                <input type="text" name="username"><br>
+                <input type="text" name="username" required="True"><br>
                <label> password : <br></label>
-               <input type="password" name="password"><br>
+               <input type="password" name="password" required="True"><br>
             <input id="aa3" type="submit" name="" value="Add Owner">
             </p>
     </form>

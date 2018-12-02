@@ -28,10 +28,10 @@
            <div class="atc">
 
            <h1 id="h4u">hAppY PaWs</h1>
-           {% for o in owners  %}
-              <h2 id="h4u">Welcome {{o.name}}</h2>
 
-           {% endfor %}
+              <h2 id="h4u">Welcome {{owners.name}}</h2>
+
+
 
              <table class="finaltable" border="2">
                <thead>
@@ -45,13 +45,13 @@
               <tr>
                 <td>{{d.id}}</td>
                 <td>{{d.name}}</td>
-                <td><a href ='add_service/{{d.id}}' > View service </a></td>
-                <td><input type="submit" name="" value="View service"></td>
+                <td><a href ='added_service/{{d.id}}' > View service </a></td>
+                <td><a href ='add_service/{{d.id}}' > Add service </a></td>
               </tr>
               {% endfor %}
 
              </table>
-
+             <a href='add_dog/{{owners.id}}'> <h4>Add Dogs</h4> </a>
 
              <hr width="100%" color="silver">
             <p> <centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
