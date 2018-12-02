@@ -9,7 +9,7 @@ class owner(models.Model):
     email = models.EmailField()
     address = models.CharField(max_length=512)
     contact_no = models.IntegerField()
-    username = models.SlugField(max_length=128, unique=True)
+    username = models.CharField(max_length=128, unique=True)
 
 
     def __str__(self):
@@ -38,13 +38,6 @@ class boarding(models.Model):
         return (f"{self.id} {self.dog} {self.owner} {self.days_of_stay}")
 
 
-class grooming(models.Model):
-    dog = models.ForeignKey(dog, on_delete=models.CASCADE)
-    service = models.CharField(max_length=128)
-
-
-    def __str__(self):
-        return (f"{self.id} {self.dog} {self.service}")
 
 
 class pricing(models.Model):
@@ -54,3 +47,12 @@ class pricing(models.Model):
 
     def __str__(self):
         return (f"{self.dog} {self.days_of_stay} {self.price}")
+
+class grooming(models.Model):
+    dog = models.ForeignKey(dog,on_delete=models.CASCADE)
+    service = models.CharField(max_length=128)
+    price = models.ForeignKey(pricing, on_delete=models.CASCADE)
+
+
+    def __str__(self):
+        return (f"{self.id} {self.dog} {self.service}")

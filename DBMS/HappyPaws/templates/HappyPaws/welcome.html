@@ -16,35 +16,47 @@
     <nav>
        <ul>
        <li> <a href="\">HOME</a></li>
-       <li> <a href="signin">LOGIN</a></li>
-      <li> <a href="add_owner">SIGNUP</a></li>
-      <li> <a href="grooming">GROOMING</a></li>
-      <li> <a href="boarding">BOARDING</a></li>
-      <li> <a href="daycare">DAYCARE</a></li>
-      <li> <a href="pricing">PRICING</a></li>
-       <li> <a href="contactus">CONTACT US</a></li>
+       <li> <a href="\signin">LOGIN</a></li>
+      <li> <a href="\add_owner">SIGNUP</a></li>
+      <li> <a href="\grooming">GROOMING</a></li>
+      <li> <a href="\boarding">BOARDING</a></li>
+      <li> <a href="\daycare">DAYCARE</a></li>
+      <li> <a href="\pricing">PRICING</a></li>
+       <li> <a href=\"contactus">CONTACT US</a></li>
            </ul>
           </nav>
            <div class="atc">
 
            <h1 id="h4u">hAppY PaWs</h1>
-           <form class="det" action="dogdetails.html" method="post">
+           {% for o in owners  %}
+              <h2 id="h4u">Welcome {{o.name}}</h2>
 
-           <p>WELCOME {{owners.username}}</p>
-              <link rel="shortcut icon" href=".ico">
-             <label for="any">Name: {{onwers.name}} <span id="space"></span></label><br>
-             <label for="any">Email id: {{onwers.name}}<span id="space"></span></label><br>
-             <label for="any">Contact number: {{onwers.name}}<span id="space"></span></label><br>
-           <label for="any">Pet name:<span id="space"></span></label><br>
-           <label for="any">Address:<span id="space"></span></label><br>
+           {% endfor %}
 
-              <input type="submit" name="submit" value="YOUR DOG DETAILS HERE!!">
-           </form>
-         </div>
-           <hr width="100%" color="silver">
-           <p> <centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
-           Phone: (80423) 745-711 | Fax: (8022) 7445-76284
-           Copyright 2018 hAppY PaWs. All Rights Reserved.<br> Web Design <span>SNEHA AND SUBHIKSHA</span> .</font size></centre></p>
+             <table class="finaltable" border="2">
+               <thead>
+                 <th>no.</th>
+                 <th>your dogs</th>
+                 <th>add service</th>
+                 <th>view service</th>
 
-         </body>
-       </html>
+               </thead>
+              {% for d in dogs %}
+              <tr>
+                <td>{{d.id}}</td>
+                <td>{{d.name}}</td>
+                <td><a href ='add_service/{{d.id}}' > View service </a></td>
+                <td><input type="submit" name="" value="View service"></td>
+              </tr>
+              {% endfor %}
+
+             </table>
+
+
+             <hr width="100%" color="silver">
+            <p> <centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
+            Phone: (80423) 745-711 | Fax: (8022) 7445-76284
+            Copyright 2018 hAppY PaWs. All Rights Reserved.<br> Web Design <span>SNEHA AND SUBHIKSHA</span>
+                </font size></centre></p>
+                           </body>
+                                   </html>

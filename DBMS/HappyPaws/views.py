@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,Http404
 from .models import *
 # Create your views here.
 from django.contrib.auth.models import User,Group
 from django.contrib.auth import login,logout,authenticate
+#USERNAME="golu"
 def index(request):
     context= {
 
@@ -11,11 +12,12 @@ def index(request):
 
 
 def dogs(request):
+    #d = request.POST['ownerid']
     context = {
     "dogs": dog.objects.all()
     }
 
-    return render(request, "HappyPaws/dogs.html",context)
+    return render(request, "HappyPaws/dogdetail.html",context)
 
 
 def owners(request):
@@ -27,7 +29,7 @@ def owners(request):
 def contactus(request):
     return render(request, "HappyPaws/contactUs.html",{})
 
-def grooming(request):
+def groomings(request):
     return render(request, "HappyPaws/grooming.html",{})
 
 def boardings(request):
@@ -36,19 +38,37 @@ def boardings(request):
 def daycare(request):
     return render(request, "HappyPaws/daycare.html",{})
 
-def welcome(request,userName):
+def added_services(request,dogID):
     try:
-        owners = owner.objects.get(username=userName)
-    except owners.DoesNotExist:
+        Dogs=dog.objects.get(pk=dogID)
+        groomings = grooming.objects.filter(dog=Dogs)
+        prices = pricing.objects.filter(dog=Dogs)
+    except grooming.DoesNotExist:
+        raise Http404("No services exist.")
+    except pricing.DoesNotExist:
+        raise Http404("No services exist.")
+    context = {
+    "grommings": groomings,
+    "dogs": Dogs,
+    "prices" : prices
+    }
+
+    return render(request, "HappyPaws/added-services.html",context)
+
+def welcome(request):
+    us = request.POST['username']
+    try:
+        OwnerS = owner.objects.get(username=us)
+        Dogs=dog.objects.filter(owner=OwnerS)
+    except dog.DoesNotExist:
+        raise Http404("Dogs does not exist.")
+    except owner.DoesNotExist:
         raise Http404("Owner does not exist.")
     context = {
-        "owners": owners,
-        "dogs": dog.objects.include(owner=owners).all()
+        "Owners": OwnerS,
+        "dogs": Dogs
     }
-    context={
-    "owners": owner.objects.get(username=username)
-    }
-    return render(request, "HappyPaws/welcome.html",{})
+    return render(request, "HappyPaws/welcome.html",context)
 
 def price(request):
     return render(request, "HappyPaws/pricing.html",{})

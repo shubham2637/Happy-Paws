@@ -1,47 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
-
-
-
-<html lang="en" dir="ltr">
-
-
-
+<html >
   <head>
-
-
-
     <meta charset="utf-8">
-
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
-    <title>Pet Owners </title>
-
-
-
+    <link rel="stylesheet" href={% static "p2.css" %}>
+    <link rel="stylesheet" href={% static "p5.css" %}>
+    <link rel="stylesheet" href={% static "p6.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Dancing+Script|Lobster|Pacifico|Play|Roboto" rel="stylesheet">
+      <title></title>
   </head>
-
-
-
-  <body>
-
-
-
+  <body background={% static "imj\pp.jpg" %}>
+    <div class="logo"> <a href="/"></a>
+      <img src={% static "imj\logo1.jpg" %} alt="">
+    </div>
+    <nav>
+       <ul>
+       <li> <a href="\">HOME</a></li>
+       <li> <a href="signin">LOGIN</a></li>
+      <li> <a href="add_owner">SIGNUP</a></li>
+      <li> <a href="grooming">GROOMING</a></li>
+      <li> <a href="boarding">BOARDING</a></li>
+      <li> <a href="daycare">DAYCARE</a></li>
+      <li> <a href="pricing">PRICING</a></li>
+       <li> <a href="contactus">CONTACT US</a></li>
+           </ul>
+          </nav>
+           <div class="atc">
     <h1>The List of Owners</h1>
 
 

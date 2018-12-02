@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href={% static "p2.css" %}>
+    <link rel="stylesheet" href={% static "p5.css" %}>
+    <link rel="stylesheet" href={% static "p6.css" %}>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Dancing+Script|Lobster|Pacifico|Play|Roboto" rel="stylesheet">
+      <title></title>
+  </head>
+  <body>
+    <div class="logo"> <a href="\"></a>
+      <img src={% static "imj\logo1.jpg" %} alt="">
+    </div>
+     <nav>
+        <ul>
+        <li> <a href="\">HOME</a></li>
+        <li> <a href="signin">LOGIN</a></li>
+       <li> <a href="add_owner">SIGNUP</a></li>
+       <li> <a href="grooming">GROOMING</a></li>
+       <li> <a href="boarding">BOARDING</a></li>
+       <li> <a href="daycare">DAYCARE</a></li>
+       <li> <a href="pricing">PRICING</a></li>
+        <li> <a href="contactus">CONTACT US</a></li>
+            </ul>
+           </nav>
+           <h1 id="h4u">hAppY PaWs <br> <h2 ALIGN="center">welcome {{dog.name}}</h2> </h1>
+
+                 <table class="tabs" border="2">
+
+                    {% for g in grommings  %}
+                    <tr id="tt5">
+                    <th id="tt">Services Added: </th>
+                    <th id="tt2">prices</th>
+                    </tr>
+                    <tr id="tl1">
+                      <td id="tl2"> g.service</td>
+                    <td id="tl4">g.price</td>  <br>
+                    </tr>
+
+                    {% endfor %}
+
+
+              </table>
+               <h1 id="end">total price: TOTAL PRICE</h1>
+               <form  ALIGN="center"  class="" action="welcome" method="post">
+
+
+                <input  id="sb" type="submit" name="finish" value="finish">
+
+
+                </form>
+              <hr width="100%" color="silver">
+              <p> <centre><font size="4">Happy Paws, 213 valley Spring Road, Richmond, B'lore 23225
+              Phone: (80423) 745-711 | Fax: (8022) 7445-76284
+              Copyright 2018 hAppY PaWs. All Rights Reserved.<br> Web Design <span>SNEHA AND SUBHIKSHA</span>
+            </font size></centre></p>
+
+
+    <hr width="100%" color="gold">
+  </body>
+</html>
